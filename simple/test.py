@@ -49,7 +49,7 @@ class Test:
             total_confidence += column
             column = float("{:.1f}".format(column*100))
             simple_prediction.append({"style": styles[i-1], "confidence": column})
-        print("Total Confidence: " + total_confidence)
+        print("Total Confidence: " + str(total_confidence))
 
         return simple_prediction
 
