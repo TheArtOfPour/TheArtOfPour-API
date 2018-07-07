@@ -1,9 +1,11 @@
 from eve_sqlalchemy.config import DomainConfig, ResourceConfig
 from simple.tables import Yeast, Hops, Fermentables, Styles
+
 import os
 
 file_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 DEBUG = True
+
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + file_path + '\\db\\training.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 RESOURCE_METHODS = ['GET', 'POST']
