@@ -3,9 +3,9 @@ from flask import request
 from eve_sqlalchemy import SQL
 from eve_sqlalchemy.validation import ValidatorSQL
 
-from .simple.tables import Base
-from .simple.stats import Stats
-from .simple.test import Test
+from simple.tables import Base
+from simple.stats import Stats
+from simple.test import Test
 
 import json
 from flask_cors import cross_origin
