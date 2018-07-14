@@ -6,5 +6,8 @@ class Stats:
     @staticmethod
     def stats(request):
         print(request)
+        '''
+        parse request as a querydsl string
+        '''
 
         return []
