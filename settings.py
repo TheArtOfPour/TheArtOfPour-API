@@ -6,7 +6,8 @@ import os
 file_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 DEBUG = True
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + file_path + '\\db\\training.db'
+# Use TAOP_DB_URI env var to set database
+SQLALCHEMY_DATABASE_URI = os.getenv('TAOP_DB_URI', 'sqlite:///' + file_path + '\\db\\training.db')
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 RESOURCE_METHODS = ['GET', 'POST']
 
