@@ -1,4 +1,7 @@
 # TheArtOfPour-API
+
+Backend API code for https://theartofpour.com
+
 Python3 based API using eve-sqlalchemy and tensorflow
 
 Thank you to everyone who attended my talk at this year's HomebrewCon.
