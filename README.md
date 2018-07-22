@@ -20,6 +20,91 @@ Using TensorFlow backend.
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  ```
  
-@todo : endpoint documentation
+Available endpoints
 
-@todo : optimize requirements.txt
+- GET /styles
+- GET /yeast
+- GET /hops
+- GET /fermentables
+- POST /test
+    - REQUEST:
+    ```{
+	"yeast":"1",
+	"fermentables":[
+		{"id":"1","amount":"8"},
+		{"id":"2","amount":"1"},
+		{"id":"4","amount":"1"},
+		{"id":"0","amount":"0"},
+		{"id":"0","amount":"0"}
+	],
+	"hops":[
+		{"id":"3","amount":"0.75","time":"60"},
+		{"id":"3","amount":"0.5","time":"30"},
+		{"id":"3","amount":"0.5","time":"5"},
+		{"id":"3","amount":"0.5","time":"0"},
+		{"id":"0","amount":"0","time":"0"},
+		{"id":"0","amount":"0","time":"0"},
+		{"id":"0","amount":"0","time":"0"},
+		{"id":"0","amount":"0","time":"0"},
+		{"id":"0","amount":"0","time":"0"}
+	]
+}
+    - RESPONSE:
+    ```[
+    {
+        "style": "stout",
+        "confidence": 61.5
+    },
+    {
+        "style": "blonde ale",
+        "confidence": 0.9
+    },
+    {
+        "style": "american pale ale",
+        "confidence": 2.4
+    },
+    {
+        "style": "porter",
+        "confidence": 4.8
+    },
+    {
+        "style": "wheat beer",
+        "confidence": 0.2
+    },
+    {
+        "style": "imperial ipa",
+        "confidence": 4.1
+    },
+    {
+        "style": "american ipa",
+        "confidence": 4.1
+    },
+    {
+        "style": "brown ale",
+        "confidence": 4.1
+    },
+    {
+        "style": "saison",
+        "confidence": 0.1
+    },
+    {
+        "style": "kölsch/cream ale",
+        "confidence": 0.2
+    },
+    {
+        "style": "pilsner/bock",
+        "confidence": 0.1
+    },
+    {
+        "style": "american amber ale",
+        "confidence": 3
+    },
+    {
+        "style": "bitter",
+        "confidence": 1.1
+    },
+    {
+        "style": "specialty beer",
+        "confidence": 13.3
+    }
+]
