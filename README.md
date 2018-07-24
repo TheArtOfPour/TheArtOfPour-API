@@ -28,7 +28,8 @@ Available endpoints
 - GET /fermentables
 - POST /test
     - REQUEST:
-    ```{
+    ```
+    {
 	"yeast":"1",
 	"fermentables":[
 		{"id":"1","amount":"8"},
@@ -49,8 +50,10 @@ Available endpoints
 		{"id":"0","amount":"0","time":"0"}
 	]
 }
+```
     - RESPONSE:
-    ```[
+    ```
+    [
     {
         "style": "stout",
         "confidence": 61.5
@@ -108,3 +111,7 @@ Available endpoints
         "confidence": 13.3
     }
 ]
+```
+
+In progress
+* GET /stats : querydsl based, freeform filter endpoint
