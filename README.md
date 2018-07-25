@@ -115,3 +115,6 @@ Available endpoints
 
 In progress
 * GET /stats : querydsl based, freeform filter endpoint
+
+@todo
+* Make ingredient dimensions dynamic (crop to model inputs or allow ui to request)
