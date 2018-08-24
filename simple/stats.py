@@ -18,6 +18,14 @@ class Stats:
             group by rh.hopID
             --having count(styleID) > 2000
             order by ct desc;
+            
+        eg. list by style
+            select s.name, count(r.styleID) as ct
+            from styles s
+            join recipes r on r.styleID = s.id
+            group by styleID
+            having count(styleID) > 7000
+            order by ct desc;
         '''
 
         return []
