@@ -11,7 +11,10 @@ I'll be working over the next few days on getting any remaining code/data deploy
 Cheers!
 
 Installing eve-sqlalchemy: **pip install eve-sqlalchemy**
+
 Installing tensorflow: **pip install tensorflow**
+
+Depending on your setup, you may also need the sqlalchemy drivers for your database.
 
 Starting the API: **python app.py**
 ```
